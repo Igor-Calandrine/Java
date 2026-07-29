@@ -29,6 +29,24 @@ public class aula1 {
        * 
        * *Armazena valores true e false
        * boolean
+       * 
+       * -Casting
+       *    As vezes é necessário converter os tipos de variáveis
+       * 
+       *    Ex: 
+       *    int a = 5
+       *    int b = 2
+       * 
+       *    a/b -> terpa como resultado 2, pois as duas variáveis são inteiras. Para termos um resultado com vírgula, é necessário realizar o Casting, ou seja, um conversão
+       * 
+       *    (double) a/b -> teremos como resultado 2.5
+       *    
+       *    Podemos também transformar para um tipo inteiro
+       * 
+       *    a = 5.67
+       *    b = (int) a
+       * 
+       *    Assim teremos b = 5
        */
    }
 }
