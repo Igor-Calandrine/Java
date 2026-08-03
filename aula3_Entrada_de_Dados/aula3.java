@@ -58,6 +58,12 @@ public class aula3 {
       Scanner entrada3 = new Scanner(System.in);
 
       Isso pode causar problemas, porque todos estão tentando ler da mesma entrada (o teclado). Além disso, se um deles executar close(), o System.in será fechado e os outros deixarão de funcionar corretamente.
+
+   -Funções Matemáticas
+      
+      A = Math.sqrt(x);   -> Raiz quadrada de x
+      A = Math.pow(x, y); -> Valor de x a potência de y
+      A = Math.abs(x);    -> Valor Absoluto de x
       */ 
 
    
