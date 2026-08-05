@@ -11,29 +11,33 @@ public static void main(String[] args) {
 
 -Estrutura Condicional
    Seja a seguinte sintaxe:
-*      if (condição) {
+      if (condição) {
          <comando>
-*      }
-*      else if {
+      }
+      else if {
          <comando>
-*      } 
-*      else {
+      } 
+      else {
          <comando>   
-*      }
+      }
 
 -Estrutura Switch-Case
    Seja a seguinte sintaxe
-*      switch (expressão) {
-*      case valor1:
+      switch (expressão) {
+      case valor1:
          <comando>
-*         break;
-*      case valor2:
+         break;
+      case valor2:
          <comando>
-*         break;
-*      case valor3:
+         break;
+      case valor3:
          <comando>
-*         break
-*      }
+         break
+      }
+
+-Operador Ternário
+   Seja a seguinte sintaxe
+*      (condição) ? verdadeiro : falso;
 
 
 
