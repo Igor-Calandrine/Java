@@ -42,18 +42,26 @@ public static void main(String[] args) {
    System.out.printf("\nSimulando uma compra");
 
    batata.quantidade = 0;
-   System.out.printf("\nAdicionar unidades ao carrinho: ");
-   int quantidade = input.nextInt();
-   input.nextLine();
-   batata.validarCompra(quantidade);
-   batata.adicionarCompra(quantidade);
-   double compraTotal = batata.valorTotalCompra();
-   batata.removerEstoque(quantidade);
+   int quantidade = 0;
+   do {
+      System.out.printf("\nQuantidade no carrinho: %d", batata.quantidade);
+      System.out.printf("\nAdicionar unidades ao carrinho ");
+      System.out.printf("\nou digite (0) zero para encerrar: ");
+      quantidade = input.nextInt(); input.nextLine();
+      batata.validarCompra(quantidade);
+
+      if (batata.validarCompra == true) {
+         batata.adicionarCompra(quantidade);
+         batata.removerEstoque(quantidade);
+      }
+
+   } while (quantidade != 0);
+
 
    System.out.printf("\nNome: %s", batata.nome);
    System.out.printf("\nPreço: R$ %.2f", batata.preco);
    System.out.printf("\nUnidades: %d", batata.quantidade);
-   System.out.printf("\nValor Total: R$ %.2f", compraTotal);
+   System.out.printf("\nValor Total: R$ %.2f", batata.valorTotalCompra());
    System.out.printf("\nEstoque: %d unidades", batata.estoque);
    System.out.printf("\nValor em Estoque: R$ %.2f ", batata.valorTotalEstoque());
 

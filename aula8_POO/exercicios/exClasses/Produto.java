@@ -8,11 +8,11 @@ public class Produto {
    public boolean validarCompra = false;
 
    public Double valorTotalEstoque() {
-      return preco * estoque;
+      return this.preco * this.estoque;
    }
 
    public Double valorTotalCompra() {
-      return preco * quantidade;
+      return this.preco * this.quantidade;
    }
 
    public void adicionarCompra(int quantidade) {
@@ -24,8 +24,9 @@ public class Produto {
    }
 
    public void validarCompra(int quantidade) {
-      int total = this.estoque - quantidade;
       this.validarCompra = false;
+      int total = this.estoque - quantidade;
+      
       if (total >= 0) {
          this.validarCompra = true;
       }
