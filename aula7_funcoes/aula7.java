@@ -20,8 +20,10 @@ public static void main(String[] args) {
    -Modificador Opcional
    *static
       O método pertence à classe, não a um objeto específico.
+      ?Dentro de uma classe static só pode ter métodos static, ela pode ser chamada sem criar uma instância
    *final
-      O método não pode ser sobrescrito (override) por uma subclasse.
+      O método não pode ser sobrescrito (override) por uma subclasse. 
+      ?Utilizado em constantes
    *Sem modificador opcional
       O método pertence à classe a um objeto específico.
    *abstract
