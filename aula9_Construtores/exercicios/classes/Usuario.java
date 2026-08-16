@@ -9,7 +9,7 @@ public class Usuario {
    public Usuario (String nome, String pass, int contaCorrente, double depositoIncial) {
       this.nome = nome;
       this.CONTA_CORRENTE = contaCorrente;
-      this.saldo = depositoIncial;
+      deposito(depositoIncial);
    }
 
    public Usuario (String nome, String pass, int contaCorrente) {
@@ -49,14 +49,14 @@ public class Usuario {
    }
 
    public void saque(double saque) {
-      this.saldo -= saque;
+      this.saldo -= (saque + 5);
    }
 
    public void dadosUsuario() {
       System.out.printf("\n"+"=".repeat(5)+"Dados da Conta"+"=".repeat(5));
       System.out.printf("\nNome: %s", getNome());
       System.out.printf("\nCC: %d", getContaCorrente());
-      System.out.printf("\nSaldo: %.2f", getSaldo());
+      System.out.printf("\nSaldo: R$ %.2f", getSaldo());
       System.out.printf("\n"+"=".repeat(10)+"=".repeat("Dados da Conta".length()));
    }
 

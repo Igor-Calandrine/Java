@@ -46,8 +46,9 @@ do {
          String nome = input.nextLine();
          System.out.printf("Digite a sua senha: ");
          String pass = input.nextLine();
+
+         int contaCorrente = random.nextInt(1000000);
          
-         double depoInicial = 0.0;
          String depoEscolha;
 
          do {
@@ -57,11 +58,12 @@ do {
             if (depoEscolha.equalsIgnoreCase("s")) {
                System.out.printf("Digite o valor do depósito inicial");
                System.out.printf("\n\t R$ ");
-               depoInicial = input.nextDouble();
+               double depoInicial = input.nextDouble();
                input.nextLine();
+               usuario1 = new Usuario(nome, pass, contaCorrente, depoInicial);
             }
             else if (depoEscolha.equalsIgnoreCase("n")){
-               depoInicial = 0.0;
+               usuario1 = new Usuario(nome, pass, contaCorrente);
             }
             else {
                System.out.printf("Opção inválida");
@@ -69,8 +71,6 @@ do {
 
          } while (!depoEscolha.equalsIgnoreCase("s") && !depoEscolha.equalsIgnoreCase("n"));
          
-         int contaCorrente = random.nextInt(1000000);
-         usuario1 = new Usuario(nome, pass, contaCorrente, depoInicial);
          usuario1.dadosUsuario();
          break;
  
