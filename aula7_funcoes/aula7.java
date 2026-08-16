@@ -11,7 +11,7 @@ public static void main(String[] args) {
    *public
       Significa que o método pode ser acessado de qualquer outra classe.
    *protected
-      Mesma classe, mesmo package e subclasses
+      Mesma classe, mesmo package e subclasses de pacotes diferentes
    *private
       Somente a própria classe
    *Sem modificador
@@ -20,7 +20,7 @@ public static void main(String[] args) {
    -Modificador Opcional
    *static
       O método pertence à classe, não a um objeto específico.
-      ?Dentro de uma classe static só pode ter métodos static, ela pode ser chamada sem criar uma instância
+      ?Com static não precisa criar uma instância, então basta chamar pela classe o método
    *final
       O método não pode ser sobrescrito (override) por uma subclasse. 
       ?Utilizado em constantes
