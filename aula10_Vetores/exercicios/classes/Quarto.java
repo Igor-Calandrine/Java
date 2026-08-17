@@ -15,7 +15,7 @@ public class Quarto {
    }
 
    public Quarto(double aluguel) {
-      this.nomes = new String[3];
+      this.nomes = new String[this.vagas];
       this.aluguel = aluguel;
    }
 
