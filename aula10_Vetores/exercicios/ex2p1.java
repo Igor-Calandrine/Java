@@ -52,7 +52,7 @@ do {
    alunos[n].setNotas(3, nota);
 
    n += 1;
-   System.out.printf("\nDeseja cadastrar um aluno (Y/N): ");
+   System.out.printf("\nDeseja cadastrar mais um aluno (Y/N): ");
    resposta = input.nextLine().substring(0, 1);
 } while (n < alunos.length && resposta.equalsIgnoreCase("y"));
 
@@ -114,5 +114,7 @@ System.out.printf("\nMenor Média: %.1f", menorMedia);
 System.out.printf("\nmaior que 5: %d", maiores5);
 
 input.close();
+
+
 }
 }
