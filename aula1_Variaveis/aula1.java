@@ -62,6 +62,32 @@ float nome = (float) 2.222
       String.valueOf()
    
 
+-Tipos Wrapper
+   Wrapper são classes que representam os tipos primitivos do Java como objetos. Isso é importante porque algumas estruturas e recursos do Java trabalham apenas com objetos. 
+   O Wrapper pode representar null
+
+*  Primitivo	   Wrapper
+   byte	         Byte
+   short	         Short
+   int	         Integer
+   long	         Long
+   float	         Float
+   double	      Double
+   char	         Character
+   boolean	      Boolean
+
+-Autoboxing
+   O Java consegue transformar automaticamente o primitivo em Wrapper:
+
+*   int numero = 10;
+*   Integer valor = numero;
+
+-Unboxing
+   O contrário também acontece:
+
+*   Integer valor = 10;
+*   int numero = valor;
+
 */
 
    }

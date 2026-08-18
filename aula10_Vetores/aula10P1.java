@@ -49,6 +49,13 @@ public static void main(String[] args) {
    *Comparar conteúdo
       Arrays.equals(a, b)
 
+-For Each
+   Há uma mneira de passar por elementos sem usar um "for" padrão com a seguinte sintaxe:
+
+*   for (tipo elemento : lista) {
+*      <comando>
+*   }
+
 
 */ 
 }
