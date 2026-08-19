@@ -84,13 +84,6 @@ for (i = 0; i < individuos; i++) {
    }
 }
 
-
-
-
-
-
-
-
 input.close();
 }
 

@@ -30,7 +30,12 @@ public static void main(String[] args) {
 
 *     ArrayList<TipoWrapper> nome_variavel = new ArrayList<>();
 
--Collections
+-Criando uma nova lista apartir de um filtro
+   Segue a seguinte sintaxe
+
+*     List<TipoWrapper> nome_variaval = nome_array.stream().filter("condição").collect(Collectors.toList());
+
+      ArrayList -> stream() -> filter() -> collect() -> toList
 
 
 */ 
