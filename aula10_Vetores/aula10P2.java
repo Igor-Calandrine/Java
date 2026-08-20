@@ -13,12 +13,15 @@ public static void main(String[] args) {
       add(), add(index, elemento)
       get(index)
       set(index, elemento)
-      remove(objeto), numeros.remove(Integer.valueOf(valor_variavel));
+      remove(objeto), 
+         *remove(Integer.valueOf(valor_variavel)); 
       size()
-      sort()
-      isEmpty()
+      sort() 
+         *.sort((a, b) -> a.compareToIgnoreCase(b)); 
+         *.sort((a, b) -> a - b);
       contains(elemento)
       indexOf(elemento)
+      isEmpty()
       lastIndexOf(elemento)
       clear()
       removeIf()
