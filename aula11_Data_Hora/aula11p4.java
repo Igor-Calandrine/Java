@@ -5,7 +5,6 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
 
 public class aula11p4 {
 public static void main(String[] args) {
@@ -14,6 +13,7 @@ public static void main(String[] args) {
 -Calculo com Data-Hora
    Data-Hora é imutável, assim como Strings, deve-se criar uma nova variável para realizar os cálculos.
    Sendo as data-hora abaixo:
+   ?Tudo pode ser escrito com .plus(Chronos)
 */ 
 
 LocalDateTime dataHora1 = LocalDateTime.parse("2026-05-10T02:10:15");
@@ -39,7 +39,9 @@ System.out.println(dataHora2Futuro);
 
 -Duration
    A classe Duration representa uma quantidade de tempo entre dois pontos temporais, sendo muito utilizada para trabalhar com horas, minutos, segundos e nanossegundos. Ela é útil, por exemplo, para calcular quanto tempo passou entre dois horários.
+   ?Tudo pode ser escrito com Chronos, o primeiro é of, os seguintes plus
 */
+
 
 Duration duration1 = Duration.between(dataHora1Passado, dataHora1Futuro);
 Duration duration2 = Duration.between(dataHora2Passado, dataHora2Futuro);
