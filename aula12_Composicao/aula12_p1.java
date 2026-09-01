@@ -1,6 +1,6 @@
 package aula12_Composicao;
 
-public class aula12_Composicao {
+public class aula12_p1 {
 public static void main(String[] args) {
 /*
 -Enumerações
