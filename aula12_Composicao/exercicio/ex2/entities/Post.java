@@ -1,6 +1,7 @@
 package aula12_Composicao.exercicio.ex2.entities;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,10 +68,11 @@ public class Post {
 
    
    public String getPost(int i) {
+      DateTimeFormatter format1 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
       StringBuilder SBtext = new StringBuilder();
 
       SBtext.append(String.format("\n---POST#%d---", i));
-      SBtext.append(String.format("\nMoment: %s", moment));
+      SBtext.append(String.format("\nMoment: %s", moment.format(format1)));
       SBtext.append(String.format("\nTitle: %s", title));
       SBtext.append(String.format("\nContent: %s", content));
       SBtext.append(String.format("\nLikes: %d", likes));

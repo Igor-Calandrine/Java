@@ -1,11 +1,7 @@
 package aula12_Composicao.exercicio.ex1;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
-import aula12_Composicao.exercicio.ex1.WorkerLevel;
-import aula12_Composicao.exercicio.ex1.HourContract;
 
 public class Worker {
    private String name;

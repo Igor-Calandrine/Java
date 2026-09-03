@@ -4,10 +4,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
-import aula12_Composicao.exercicio.ex1.WorkerLevel;
-import aula12_Composicao.exercicio.ex1.Worker;
-import aula12_Composicao.exercicio.ex1.Department;
-import aula12_Composicao.exercicio.ex1.HourContract;
 
 public class mainApp {
 public static void main(String[] args) {
