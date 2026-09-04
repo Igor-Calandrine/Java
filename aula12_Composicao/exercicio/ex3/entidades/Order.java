@@ -1,6 +1,5 @@
 package aula12_Composicao.exercicio.ex3.entidades;
 
-import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -35,10 +34,11 @@ public class Order {
       string.append("\nOder status: " + getStatus());
       string.append(client.getClient());
 
-      for (OrderItem e : orderList) {
-         System.out.printf("%s", e.getProduct().getName());
-      }
       return string.toString();
+   }
+
+   public List<OrderItem> getItems() {
+      return orderList;
    }
 
    public String getOrderList() {
@@ -49,9 +49,20 @@ public class Order {
          SBtring.append("\n" + e.getProduct().getName());
          SBtring.append(" $" + e.getPrice());
          SBtring.append(" Quantity: " + e.getQuantity());
-         SBtring.append(" Subtotal: " + e.getSubTotal());
+         SBtring.append(" Subtotal: $" + e.getSubTotal());
       }
+
+      SBtring.append(String.format(" \nTotal Price: $%.2f", getTotalPrice()));
       return SBtring.toString();
+   }
+
+   public Double getTotalPrice() {
+      Double totalPrice = 0.0;
+      for (OrderItem e : orderList) {
+         totalPrice += e.getSubTotal();
+      }
+
+      return totalPrice;
    }
    
    public void addItem(OrderItem orderItem) {

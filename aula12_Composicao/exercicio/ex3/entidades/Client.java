@@ -8,7 +8,7 @@ public class Client {
    private String name;
    private String email;
    private final LocalDate BIRTHDATE;
-   private List<OrderItem> clientItemList= new ArrayList<>();
+   private List<Order> clientItemList= new ArrayList<>();
 
    public Client(String name, String email, LocalDate BIRTHDATE) {
       this.name = name;
@@ -28,7 +28,7 @@ public class Client {
       return BIRTHDATE;
    }
 
-   public List<OrderItem> getClientItemList() {
+   public List<Order> getClientItemList() {
       return clientItemList;
    }
 
@@ -51,19 +51,25 @@ public class Client {
       return SBtring.toString();
    }
 
-   public String getClientItemListString() {
-      StringBuilder SBtring = new StringBuilder("");
+   public String getClientOrderList() {
+      StringBuilder SBstring = new StringBuilder("");
 
-      SBtring.append("\n---Item List---");
-      
-      for (OrderItem e : clientItemList) {
-         SBtring.append("\n: " + e.getProduct());
-         SBtring.append(" - " + e.getPrice());
-         SBtring.append(" Quantity: " + e.getQuantity());
-         SBtring.append(String.format(" - Subtotal: $ %.2f", e.getSubTotal()));
+      SBstring.append("\n\n===LIST ORDER CLIENT===");
+      for (Order e : clientItemList) {
+         SBstring.append(e.getOrder());
+         SBstring.append(e.getOrderList());
+         SBstring.append("\n");
       }
 
-      return SBtring.toString();
+      return SBstring.toString();
+   }
+
+   public void addOrderItem(Order item) {
+      clientItemList.add(item);
+   }
+
+   public void removeOrderItem(Order item) {
+      clientItemList.remove(item);
    }
 
 
