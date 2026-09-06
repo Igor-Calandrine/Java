@@ -1,6 +1,7 @@
 package aula12_Composicao.exercicio.ex3;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -40,12 +41,8 @@ System.out.printf("Email: ");
 String email = input.nextLine();
 System.out.print("Birth Date (DD/MM/YYYY): " );
 String stringBirth = input.nextLine();
-
-String birthDateYear = stringBirth.substring(6);
-String birthDateMonth = stringBirth.substring(3,5);
-String birthDateDay = stringBirth.substring(0,2);
-String birthDateString = birthDateYear + "-" + birthDateMonth + "-" + birthDateDay;
-LocalDate birthDate = LocalDate.parse(birthDateString);
+DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+LocalDate birthDate = LocalDate.parse(stringBirth, format);
 
 Client client2 = new Client(name, email, birthDate);
 
