@@ -1,15 +1,12 @@
 package aula13_Heranca_Polimorfismo.exercicios.ex1.entidades;
 
-public class funcionarioTercerizado extends funcionario{
-   private String nome;
-   private int horas;
-   private Double valorHora;
+public class FuncionarioTercerizado extends Funcionario{
    private Double adicional;
 
-   public funcionarioTercerizado() {
+   public FuncionarioTercerizado() {
    }
 
-   public funcionarioTercerizado(String nome, int horas, Double valorHora, Double adicional) {
+   public FuncionarioTercerizado(String nome, int horas, Double valorHora, Double adicional) {
       super(nome, horas, valorHora);
       this.adicional = adicional;
    }
@@ -47,8 +44,16 @@ public class funcionarioTercerizado extends funcionario{
    }
 
    @Override 
-   public Double pagamento() {
-      return super.pagamento() + adicional * 1.1;
+   public Double remuneracao() {
+      return super.remuneracao() + adicional * 1.1;
+   }
+
+   @Override
+   public String funcionarioEstatus() {
+      String sb = super.funcionarioEstatus() + 
+      String.format("\nAdicional: R$%.2f", getAdicional());
+      
+      return sb.toString();
    }
 
    

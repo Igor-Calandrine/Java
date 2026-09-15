@@ -1,14 +1,14 @@
 package aula13_Heranca_Polimorfismo.exercicios.ex1.entidades;
 
-public class funcionario {
+public class Funcionario {
    protected String nome;
    protected int horas;
    protected Double valorHora;
 
-   public funcionario () {
+   public Funcionario () {
    }
 
-   public funcionario (String nome, int horas, Double valorHora) {
+   public Funcionario (String nome, int horas, Double valorHora) {
       this.nome = nome;
       this.horas = horas;
       this.valorHora = valorHora;
@@ -22,7 +22,7 @@ public class funcionario {
       return horas;
    }
 
-   public Double getvalorHora() {
+   public Double getValorHora() {
       return valorHora;
    }
 
@@ -38,7 +38,17 @@ public class funcionario {
       this.valorHora = valorHora;
    }
 
-   public Double pagamento() {
+   public Double remuneracao() {
       return valorHora * horas;
+   }
+
+   public String funcionarioEstatus() {
+      StringBuilder sb = new StringBuilder("");
+      sb.append("===Estatus Funcionário===");
+      sb.append(String.format("\nNome: %s", getNome()));
+      sb.append(String.format("\nHoras: %d", getHoras()));
+      sb.append(String.format("\nValor/Hora: R$%.2f", getValorHora()));
+
+      return sb.toString();
    }
 }
