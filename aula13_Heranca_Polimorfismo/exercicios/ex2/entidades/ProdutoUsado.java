@@ -1,6 +1,5 @@
 package aula13_Heranca_Polimorfismo.exercicios.ex2.entidades;
 
-import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -31,7 +30,7 @@ public class ProdutoUsado extends Produto {
       StringBuilder sb = new StringBuilder("");
       sb.append("\n===Produto Usado===");
       sb.append("\nData de Farbicação: " + localDateFormat());
-      sb.append(super.produtoString());
+      sb.append(super.produtoInfo());
 
       return sb.toString();
    }

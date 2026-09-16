@@ -29,11 +29,20 @@ public class Produto {
       this.preco = preco;
    }
 
+   public String produtoInfo() {
+      StringBuilder sb = new StringBuilder("");
+      sb.append("\nNome: " + nome);
+      sb.append(String.format("\nPreço: R$%.2f", preco));
+
+      return sb.toString();
+
+   }
+
    public String produtoString() {
       StringBuilder sb = new StringBuilder("");
+      sb.append("\n===Novo Produto===");
+      sb.append(produtoInfo());
       
-      sb.append("\nNome: " + nome);
-      sb.append("\nPreço: R$" + preco);
 
       return sb.toString();
    }

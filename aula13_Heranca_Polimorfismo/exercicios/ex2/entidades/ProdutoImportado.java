@@ -17,16 +17,16 @@ public class ProdutoImportado extends Produto {
    }
 
    public Double precoFinal () {
-      return preco + preco * alfandega;
+      return preco + preco * alfandega/100;
    }
 
    @Override 
    public String produtoString() {
       StringBuilder sb = new StringBuilder("");
       sb.append("\n===Produto Importado===");
-      sb.append(super.produtoString());
-      sb.append("\nTaxa Alfandegária: " + alfandega);
-      sb.append("\nPreco Final: R$ " + precoFinal());
+      sb.append(super.produtoInfo());
+      sb.append("\nTaxa Alfandegária: " + alfandega + "%");
+      sb.append(String.format("\nPreco Final: R$%.2f ", precoFinal()));
 
       return sb.toString();
    }
