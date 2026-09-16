@@ -11,30 +11,6 @@ public class FuncionarioTercerizado extends Funcionario{
       this.adicional = adicional;
    }
 
-   public String getNome() {
-      return nome;
-   }
-
-   public void setNome(String nome) {
-      this.nome = nome;
-   }
-
-   public int getHoras() {
-      return horas;
-   }
-
-   public void setHoras(int horas) {
-      this.horas = horas;
-   }
-
-   public Double getValorHora() {
-      return valorHora;
-   }
-
-   public void setValorHora(Double valorHora) {
-      this.valorHora = valorHora;
-   }
-
    public Double getAdicional() {
       return adicional;
    }
