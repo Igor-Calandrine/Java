@@ -45,11 +45,14 @@ public static void main(String[] args) {
    Por exemplo:
 
    -Local
+
+   *parse
    LocalDate data = LocalDate.parse("2026-08-22");
    LocalDateTime dataHora = LocalDateTime.parse("2026-08-22T20:30:00");
 
    ou 
-
+   
+   *of
    LocalDate data = LocalDate.of(2026, 8, 22);
    LocalDateTime dataHora = LocalDateTime.of(2026, 8, 22, 20, 30, 0);   
    
