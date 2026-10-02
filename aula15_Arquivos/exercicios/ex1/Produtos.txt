@@ -1,0 +1,25 @@
+
+Produto: Maça
+Quantidade: 4
+Valor: 90.0
+
+Produto: Cereja
+Quantidade: 0
+Valor: 34.0
+
+Produto: Caju
+Quantidade: 5
+Valor: 34.0
+
+Produto: Uva
+Quantidade: 9
+Valor: 34.0
+----
+Produto: Cebola
+Quantidade: 2
+Valor: R$50.0
+----
+Produto: Alho
+Quantidade: 4
+Valor: R$50.0
+----
