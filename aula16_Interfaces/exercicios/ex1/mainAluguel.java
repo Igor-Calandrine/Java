@@ -1,5 +1,8 @@
 package aula16_Interfaces.exercicios.ex1;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -67,9 +70,19 @@ switch (opcao) {
       break;
 
    case 3:
-      System.out.printf("===Lista de Reservas===");
-      for (Reserva e : reservaLista) {
-         System.out.printf("%s", e.toString());
+      System.out.printf("===Lista de Reservas===\n");
+      String path = "aula16_Interfaces\\exercicios\\ex1\\RegistroReservas\\RegistroReservas.txt";
+
+      try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+         String line = br.readLine();
+
+         while (line != null) {
+            System.out.println(line);
+            line = br.readLine();
+         }
+      }
+      catch (IOException e) {
+         System.out.println("Erro: " + e.getMessage());
       }
       break;
 

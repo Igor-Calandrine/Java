@@ -48,7 +48,7 @@ public class Reserva {
       sb.append("Cliente: " + cliente);
       sb.append("\nEspaço: " + tipoReservavel.toString());
       sb.append("\nData Contrato: " + INICIOALUGUEL + " - " + fimAluguel);
-      sb.append("\nValor Final: " + valorFinalContrato());
+      sb.append(String.format("\nValor Final: R$%.2f", valorFinalContrato()));
       sb.append("\n");
 
       return sb.toString();
@@ -76,11 +76,16 @@ public class Reserva {
       }
    }
 
-   public void listarProduto() {
+   public void listarReservas() {
       String path = "aula16_Interfaces\\exercicios\\ex1\\RegistroReservas\\RegistroReservas.txt";
 
-      try (BufferedReader bf = new BufferedReader(new FileReader(path))) {
-         
+      try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+         String line = br.readLine();
+
+         while (line != null) {
+            System.out.println(line);
+            line = br.readLine();
+         }
       }
       catch (IOException e) {
          System.out.println("Erro: " + e.getMessage());

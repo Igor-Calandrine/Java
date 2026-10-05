@@ -2,7 +2,13 @@ Cliente: Igor
 Espaço: 
 Espaço: 54F
 Valor/Mês: 46.0
-
 Data Contrato: 1986-03-05 - 2024-03-05
 Valor Final: 20976.0
+
+Cliente: Bianca
+Espaço: 
+Sala: 90H
+Valor/Mês: 40.0
+Data Contrato: 1990-02-12 - 1990-12-20
+Valor Final: 410.6666666666667
 
