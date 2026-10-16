@@ -82,6 +82,21 @@ public static void main(String[] args) {
    *Interfaces também podem possuir constantes
       Campos declarados em uma interface são, por padrão, public, static e final.
 
+-Default
+   Imagine que você queira adicionar um método chamado exibirInformacao() à interface. Você gostaria que todas as classes que implementam Reservavel tivessem esse comportamento, sem precisar escrever o mesmo código em cada uma delas.
+   É nesse momento que entra o método default. Sua sintaxe é trocar o public por default no início de métodos
+
+   Observe que se deve criar os métodos gets necessários na interface para serem usados na chamada de seus métodos default, assim a impossibilidade da criação de construtores e atributos seão suprimidas
+
+   public interface Pagamento {
+
+      double getValorTotal();
+
+      default double calcularParcela(int meses) {
+         return getValorTotal() / meses;
+      }
+   }
+
 
 
 */ 
