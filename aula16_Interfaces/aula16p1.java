@@ -1,6 +1,6 @@
 package aula16_Interfaces;
 
-public class aula16 {
+public class aula16p1 {
 public static void main(String[] args) {
 /*
 -Interfaces

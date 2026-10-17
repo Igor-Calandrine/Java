@@ -1,6 +1,6 @@
 package aula17_Generics.exercicios.ex2;
 
-public class DadosPessoa <Type>{
+public class DadosPessoa<Type>{
    private Type dados;
 
    public DadosPessoa(Type dados) {
