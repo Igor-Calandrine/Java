@@ -5,12 +5,18 @@ import java.time.format.DateTimeFormatter;
 
 public class ContratoEmpresarial implements Contrato{
    private String nomeEmpresa;
-   private double valorTotal;
+   private Double valorTotal;
    private LocalDate dataInicio;
    private int meses;
    private Double juros = 3.0;
 
-   public ContratoEmpresarial(String nomeEmpresa, double valorTotal, LocalDate dataInicio, int meses) {
+   public ContratoEmpresarial(String nomeEmpresa, Double valorTotal, LocalDate dataInicio, int meses) {
+      if (valorTotal < 0 || valorTotal == null) {
+         throw new IllegalArgumentException("Valor do contrato inválido");
+      }
+      if (dataInicio.isBefore(LocalDate.now()) || dataInicio == null) {
+         throw new IllegalArgumentException("Data de início inválida");
+      }
       this.nomeEmpresa = nomeEmpresa;
       this.valorTotal = valorTotal;
       this.dataInicio = dataInicio;

@@ -11,6 +11,12 @@ public class ContratoConsultoria implements Contrato{
    private Double juros = 5.0;
 
    public ContratoConsultoria(String nomeConsultor, Double valorContrato, LocalDate dataInicio, int meses) {
+      if (valorContrato < 0 || valorContrato == null) {
+         throw new IllegalArgumentException("Valor do contrato inválido");
+      }
+      if (dataInicio.isBefore(LocalDate.now()) || dataInicio == null) {
+         throw new IllegalArgumentException("Data de início inválida");
+      }
       this.nomeConsultor = nomeConsultor;
       this.valorContrato = valorContrato;
       this.dataInicio = dataInicio;

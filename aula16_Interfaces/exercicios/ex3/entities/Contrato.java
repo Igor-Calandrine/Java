@@ -2,12 +2,10 @@ package aula16_Interfaces.exercicios.ex3.entities;
 
 public interface Contrato {
    public Double getTotalContrato();
-
    public Double getJuros();
    public int getMeses();
 
    default Double parcelaContrato() {
-
       if (getMeses() <= 0) {
          throw new IllegalArgumentException("Erro: dado inválido");
       }
