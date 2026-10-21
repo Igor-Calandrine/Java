@@ -2,7 +2,6 @@ package aula17_Generics.exercicios.ex3;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 public class Produto implements Comparable<Produto>{
    private String nome;

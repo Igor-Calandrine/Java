@@ -35,6 +35,17 @@ public class Produto implements Comparable<Produto> {
       return preco.compareTo(proximo.getPreco());
    }
 
+   public int comparar(Produto proximo, Criterio criterio) {
+
+      if (criterio == Criterio.PRECO) {
+         return preco.compareTo(proximo.getPreco());
+      } else if (criterio == Criterio.FABRICADO){
+         return fabricado.compareTo(proximo.getFabricado());
+      } else {
+         throw new RuntimeException("Opção Inválida");
+      }
+   }  
+
    public String getNome() {
       return nome;
    }
