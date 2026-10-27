@@ -9,6 +9,8 @@ public class aula17p3 {
 *      List<Integer> numeros = new ArrayList<>();
 *      List<Double> decimais = new ArrayList<>();
 
+   ?o curinga (?) é usado em argumentos de tipos genéricos, não para definir o parâmetro de tipo de uma classe.
+
    Embora Integer e Double sejam subclasses de Number, uma List<Integer> não pode ser tratada diretamente como uma List<Number> e enm List,<Objetc>. Isso acontece porque os Generics em Java não permitem essa conversão automaticamente.
 
    ?Os curingas existem para oferecer mais flexibilidade ao trabalhar com diferentes tipos parametrizados, permitindo definir quais tipos são aceitos por um método ou variável.
