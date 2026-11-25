@@ -1,0 +1,8 @@
+Notebook	   3500.00  5
+Mouse	      80.00	   20
+Teclado	   150.00   12
+Monitor	   1200.00	8
+Headset	   250.00	15
+Webcam	   180.00	3
+Impressora	900.00	0
+Mousepad	   45.00	   30

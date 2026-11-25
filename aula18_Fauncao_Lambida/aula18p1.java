@@ -1,6 +1,6 @@
 package aula18_Fauncao_Lambida;
 
-public class aula18 {
+public class aula18p1 {
 public static void main(String[] args) {
 /*
 -Expressão Lâmbida
@@ -78,7 +78,7 @@ public static void main(String[] args) {
 
 
    Ou utilizar a referência a método:
-*     Comparator<Funcionario> compararPorNome = Comparator.comparing(Funcionario::getName)
+*     Comparator<Funcionario> compararPorNome = Comparator.comparing(Funcionario::getName, String.CASE_INSENSITIVE_ORDER)
 *     funcionarios.sort(compararPorNome);
 
 *     funcionarios.sort(Comparator.comparing(Funcionario::getSalario));
